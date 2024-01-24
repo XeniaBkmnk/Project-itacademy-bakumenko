@@ -33,4 +33,7 @@ public class BlushPage {
     public String getErrorMessageNonEmail(){
        return driver.findElement(By.xpath(BlushPageXpath.ERROR_MESSAGE_NON_EMAIL)).getText();
     }
+    public String getErrorMessageNonPassword(){
+        return driver.findElement(By.xpath(BlushPageXpath.ERROR_MESSAGE_NON_PASSWORD)).getText();
+    }
 }
