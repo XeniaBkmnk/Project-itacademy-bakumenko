@@ -5,8 +5,7 @@ import com.github.javafaker.Faker;
 public class User {
     public static String getRandomNonCorrectEmail() {
         Faker faker = new Faker();
-        return faker.name().firstName()
-                + "@test";
+        return faker.name().firstName();
     }
 
     public static String getRandomCorrectEmail() {
