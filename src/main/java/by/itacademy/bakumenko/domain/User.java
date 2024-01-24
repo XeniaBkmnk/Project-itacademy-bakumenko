@@ -8,4 +8,9 @@ public class User {
         return faker.name().firstName()
                 + "@test";
     }
+
+    public static String getRandomCorrectEmail() {
+        Faker faker = new Faker();
+        return faker.internet().safeEmailAddress(faker.name().firstName());
+    }
 }
