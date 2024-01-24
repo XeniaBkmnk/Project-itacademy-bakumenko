@@ -22,7 +22,13 @@ public class BlushPage {
     public void clickLoginButtonMain() {
         driver.findElement(By.xpath(BlushPageXpath.LOGIN_BUTTON_MAIN)).click();
     }
-    public void clickLoginInputEmail(){
+
+    public void clickLoginInputEmail() {
         driver.findElement(By.xpath(BlushPageXpath.LOGIN_INPUT_EMAIL)).click();
     }
+
+    public void clickLoginInputPassword() {
+        driver.findElement(By.xpath(BlushPageXpath.LOGIN_INPUT_EMAIL)).click();
+    }
+
 }
