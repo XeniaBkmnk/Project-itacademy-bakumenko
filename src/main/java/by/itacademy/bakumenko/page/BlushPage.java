@@ -30,5 +30,7 @@ public class BlushPage {
     public void clickLoginInputPassword() {
         driver.findElement(By.xpath(BlushPageXpath.LOGIN_INPUT_EMAIL)).click();
     }
-
+    public String getErrorMessageNonEmail(){
+       return driver.findElement(By.xpath(BlushPageXpath.ERROR_MESSAGE_NON_EMAIL)).getText();
+    }
 }
