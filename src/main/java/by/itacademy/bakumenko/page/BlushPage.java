@@ -24,15 +24,17 @@ public class BlushPage {
         Thread.sleep(1000);
     }
 
-    public void sendKeysLoginInputEmail() {
-        driver.findElement(By.xpath(BlushPageXpath.LOGIN_INPUT_EMAIL)).sendKeys();
+    public void sendKeysLoginInputEmail(String newEmail) throws InterruptedException {
+        driver.findElement(By.xpath(BlushPageXpath.LOGIN_INPUT_EMAIL)).sendKeys(newEmail);
+        Thread.sleep(1000);
     }
 
-    public void sendKeysInputPassword() {
-        driver.findElement(By.xpath(BlushPageXpath.LOGIN_INPUT_EMAIL)).sendKeys();
+    public void sendKeysInputPassword(String newPassword) {
+        driver.findElement(By.xpath(BlushPageXpath.LOGIN_INPUT_PASSWORD)).sendKeys(newPassword);
     }
 
-    public String getErrorMessageNonEmail() {
+    public String getErrorMessageNonEmail() throws InterruptedException {
+        Thread.sleep(1000);
         return driver.findElement(By.xpath(BlushPageXpath.ERROR_MESSAGE_NON_EMAIL)).getText();
     }
 
