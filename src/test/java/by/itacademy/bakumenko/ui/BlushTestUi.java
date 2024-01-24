@@ -2,13 +2,12 @@ package by.itacademy.bakumenko.ui;
 
 import by.itacademy.bakumenko.domain.User;
 import by.itacademy.bakumenko.page.BlushPage;
-import org.checkerframework.checker.units.qual.A;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class BlushTestUi extends BaseTest {
     @Test
-    public void testLoginCheck() throws InterruptedException {
+    public void testLoginNonCorrectEmail() throws InterruptedException {
         BlushPage blushPage = new BlushPage();
         blushPage.openMainPage();
         blushPage.clickLoginInputField();
