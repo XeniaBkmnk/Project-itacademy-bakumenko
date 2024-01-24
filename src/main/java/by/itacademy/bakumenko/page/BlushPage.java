@@ -19,21 +19,24 @@ public class BlushPage {
         driver.findElement(By.xpath(BlushPageXpath.LOGIN_INPUT_FEILD)).click();
     }
 
-    public void clickLoginButtonMain() {
+    public void clickLoginButtonMain() throws InterruptedException {
         driver.findElement(By.xpath(BlushPageXpath.LOGIN_BUTTON_MAIN)).click();
+        Thread.sleep(1000);
     }
 
-    public void clickLoginInputEmail() {
-        driver.findElement(By.xpath(BlushPageXpath.LOGIN_INPUT_EMAIL)).click();
+    public void sendKeysLoginInputEmail() {
+        driver.findElement(By.xpath(BlushPageXpath.LOGIN_INPUT_EMAIL)).sendKeys();
     }
 
-    public void clickLoginInputPassword() {
-        driver.findElement(By.xpath(BlushPageXpath.LOGIN_INPUT_EMAIL)).click();
+    public void sendKeysInputPassword() {
+        driver.findElement(By.xpath(BlushPageXpath.LOGIN_INPUT_EMAIL)).sendKeys();
     }
-    public String getErrorMessageNonEmail(){
-       return driver.findElement(By.xpath(BlushPageXpath.ERROR_MESSAGE_NON_EMAIL)).getText();
+
+    public String getErrorMessageNonEmail() {
+        return driver.findElement(By.xpath(BlushPageXpath.ERROR_MESSAGE_NON_EMAIL)).getText();
     }
-    public String getErrorMessageNonPassword(){
+
+    public String getErrorMessageNonPassword() {
         return driver.findElement(By.xpath(BlushPageXpath.ERROR_MESSAGE_NON_PASSWORD)).getText();
     }
 }
