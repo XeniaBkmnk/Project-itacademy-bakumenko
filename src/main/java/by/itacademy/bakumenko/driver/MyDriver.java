@@ -8,4 +8,12 @@ public class MyDriver {
 
     private MyDriver() {
     }
+
+    public static WebDriver getDriver() {
+        if (driver == null) {
+            driver = new ChromeDriver();
+            driver.manage().window().maximize();
+        }
+        return driver;
+    }
 }
