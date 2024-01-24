@@ -14,8 +14,12 @@ public class BlushPage {
     public void openMainPage() {
         driver.get("https://blush.design/");
     }
-    public void clickLoginInputField(){
-      driver.findElement(By.xpath(BlushPageXpath.LOGIN_INPUT_FEILD)).click();
+
+    public void clickLoginInputField() {
+        driver.findElement(By.xpath(BlushPageXpath.LOGIN_INPUT_FEILD)).click();
     }
 
+    public void clickLoginButtonMain() {
+        driver.findElement(By.xpath(BlushPageXpath.LOGIN_BUTTON_MAIN)).click();
+    }
 }
