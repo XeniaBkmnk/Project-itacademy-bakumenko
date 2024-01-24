@@ -6,4 +6,6 @@ public class BlushPageXpath {
     public static final String LOGIN_INPUT_PASSWORD = "//input[@id='email']";
     public static final String LOGIN_INPUT_EMAIL = "//input[@id='password']";
     public static final String ERROR_MESSAGE_NON_PASSWORD = "//*[@id=\"password-error\"]";
+    public static final String ERROR_MESSAGE_NON_EMAIL = "//*[@id=\"email-error\"]";
+
 }
