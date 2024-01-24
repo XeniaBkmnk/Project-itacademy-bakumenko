@@ -81,4 +81,5 @@ public class BlushTestApi {
                 then().
                 log().all();
     }
+
 }
