@@ -9,18 +9,10 @@ import static org.hamcrest.core.IsEqual.equalTo;
 public class BlushTestApi {
     @Test
     public void testBushLoginNoDate() {
-        String body = "{\"email\":\"\"," +
-                "\"password\":\" \"," +
-                "\"returnSecureToken\":true" +
-                "}";
-        given().
-                body(body).
-                header("Content-Type", "application/json").
-                when().
-                post("https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyDUR6XzgDyhoU9Ad4fw6_aoSTXEmVjuhtE").
+        ApiPage.requestHeader().body(ApiPage.bodyLoginNoData).
+                when().post(ApiPage.url).
                 then().
-                statusCode(400).
-                body("error.errors[0].message", equalTo("INVALID_EMAIL"));
+                statusCode(400).body("error.errors[0].message", equalTo("INVALID_EMAIL"));
     }
 
     @Test
@@ -28,8 +20,7 @@ public class BlushTestApi {
         ApiPage.requestHeader().body(ApiPage.bodyLoginNoPassword).
                 when().post(ApiPage.url).
                 then().
-                statusCode(400).
-                body("error.errors[0].message",equalTo("MISSING_PASSWORD"));
+                statusCode(400).body("error.errors[0].message",equalTo("MISSING_PASSWORD"));
     }
 
     @Test
