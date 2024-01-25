@@ -1,10 +1,10 @@
-package by.itacademy.bakumenko.api.page;
+package by.itacademy.bakumenko.page;
 
 import io.restassured.specification.RequestSpecification;
 
 import static io.restassured.RestAssured.given;
 
-public class ApiPage {
+public class BlushApiPage {
     public static String bodyLoginNoData = "{" +
             "\"email\":\"\"," +
             "\"password\":\" \"," +
