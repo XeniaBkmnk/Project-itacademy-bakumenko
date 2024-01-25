@@ -1,5 +1,9 @@
 package by.itacademy.bakumenko.page;
 
+import io.restassured.specification.RequestSpecification;
+
+import static io.restassured.RestAssured.given;
+
 public class ApiPage {
     public static String bodyLoginNoData = "{" +
             "\"email\":\"\"," +
@@ -22,4 +26,10 @@ public class ApiPage {
             "\"returnSecureToken\":true" +
             "}";
     public static String url = "https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyDUR6XzgDyhoU9Ad4fw6_aoSTXEmVjuhtE";
+
+    public static RequestSpecification requestHeader() {
+        RequestSpecification header = given().
+                contentType("application/json");
+        return header;
+    }
 }
