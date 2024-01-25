@@ -21,5 +21,5 @@ public class ApiPage {
             "\"password\":\"   \"," +
             "\"returnSecureToken\":true" +
             "}";
-    public String url = "https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyDUR6XzgDyhoU9Ad4fw6_aoSTXEmVjuhtE";
+    public static String url = "https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyDUR6XzgDyhoU9Ad4fw6_aoSTXEmVjuhtE";
 }
