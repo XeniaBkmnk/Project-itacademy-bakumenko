@@ -1,5 +1,6 @@
 package by.itacademy.bakumenko.api;
 
+import by.itacademy.bakumenko.page.ApiPage;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
@@ -24,15 +25,8 @@ public class BlushTestApi {
 
     @Test
     public void testBushLoginNoPassword() {
-        String body = "{\"email\":\"test12@gmail.com\"," +
-                "\"password\":\"\"," +
-                "\"returnSecureToken\":true" +
-                "}";
-        given().
-                body(body).
-                header("Content-Type", "application/json").
-                when().
-                post("https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyDUR6XzgDyhoU9Ad4fw6_aoSTXEmVjuhtE").
+        ApiPage.requestHeader().body(ApiPage.bodyLoginNoPassword).
+                when().post(ApiPage.url).
                 then().
                 statusCode(400).
                 body("error.errors[0].message",equalTo("MISSING_PASSWORD"));
