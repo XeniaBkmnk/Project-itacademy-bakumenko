@@ -3,7 +3,6 @@ package by.itacademy.bakumenko.api;
 import by.itacademy.bakumenko.page.BlushApiPage;
 import org.junit.jupiter.api.Test;
 
-import static io.restassured.RestAssured.given;
 import static org.hamcrest.core.IsEqual.equalTo;
 
 public class BlushApiTest {
