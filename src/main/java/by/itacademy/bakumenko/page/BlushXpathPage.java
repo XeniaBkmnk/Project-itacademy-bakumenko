@@ -1,6 +1,6 @@
 package by.itacademy.bakumenko.page;
 
-public class BlushPageXpath {
+public class BlushXpathPage {
     public static final String LOGIN_INPUT_FELD = "//*[@id=\"__next\"]/div[1]/div[3]/a/span";
     public static final String LOGIN_BUTTON_MAIN = "//*[@id=\"__next\"]/div[3]/div/div[1]/form/button";
     public static final String LOGIN_INPUT_PASSWORD = "//input[@id='password']";

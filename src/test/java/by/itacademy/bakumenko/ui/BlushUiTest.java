@@ -5,7 +5,7 @@ import by.itacademy.bakumenko.page.BlushPage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class BlushTestUi extends BaseTest {
+public class BlushUiTest extends BaseTest {
     @Test
     public void testLoginNonUserEmail() throws InterruptedException {
         BlushPage blushPage = new BlushPage();
