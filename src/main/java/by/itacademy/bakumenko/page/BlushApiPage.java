@@ -27,7 +27,7 @@ public class BlushApiPage {
             "}";
     public static String url = "https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyDUR6XzgDyhoU9Ad4fw6_aoSTXEmVjuhtE";
 
-    public static RequestSpecification requestHeader() {
+    public static RequestSpecification headerContentType() {
         return given().
                 contentType("application/json");
     }
