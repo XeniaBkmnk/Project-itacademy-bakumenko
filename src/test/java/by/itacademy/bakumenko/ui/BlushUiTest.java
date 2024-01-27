@@ -1,7 +1,7 @@
 package by.itacademy.bakumenko.ui;
 
 import by.itacademy.bakumenko.domain.User;
-import by.itacademy.bakumenko.page.BlushPage;
+import by.itacademy.bakumenko.pages.BlushPage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

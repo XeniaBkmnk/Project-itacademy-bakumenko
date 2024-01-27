@@ -1,4 +1,4 @@
-package by.itacademy.bakumenko.page;
+package by.itacademy.bakumenko.pages;
 
 public class BlushXpathPage {
     public static final String LOGIN_INPUT_FELD = "//*[@id=\"__next\"]/div[1]/div[3]/a/span";

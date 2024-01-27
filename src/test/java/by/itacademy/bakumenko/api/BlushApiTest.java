@@ -1,6 +1,6 @@
 package by.itacademy.bakumenko.api;
 
-import by.itacademy.bakumenko.page.BlushApiPage;
+import by.itacademy.bakumenko.pages.BlushApiPage;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.core.IsEqual.equalTo;

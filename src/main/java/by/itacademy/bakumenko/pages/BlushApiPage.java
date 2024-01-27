@@ -1,4 +1,4 @@
-package by.itacademy.bakumenko.page;
+package by.itacademy.bakumenko.pages;
 
 import io.restassured.specification.RequestSpecification;
 

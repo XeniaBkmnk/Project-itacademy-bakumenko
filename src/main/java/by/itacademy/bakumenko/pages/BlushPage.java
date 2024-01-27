@@ -1,4 +1,4 @@
-package by.itacademy.bakumenko.page;
+package by.itacademy.bakumenko.pages;
 
 import by.itacademy.bakumenko.driver.WebDriverSingleton;
 import org.openqa.selenium.By;
