@@ -8,7 +8,7 @@ import static org.hamcrest.core.IsEqual.equalTo;
 public class BlushApiTest {
     @Test
     public void testBushLoginNoDate() {
-        BlushApiPage.requestHeader().
+        BlushApiPage.headerContentType().
                 body(BlushApiPage.bodyLoginNoData).
                 when().post(BlushApiPage.url).
                 then().
@@ -17,7 +17,7 @@ public class BlushApiTest {
 
     @Test
     public void testBushLoginNoPassword() {
-        BlushApiPage.requestHeader().
+        BlushApiPage.headerContentType().
                 body(BlushApiPage.bodyLoginNoPassword).
                 when().post(BlushApiPage.url).
                 then().
@@ -26,7 +26,7 @@ public class BlushApiTest {
 
     @Test
     public void testBushLoginNoEmail() {
-        BlushApiPage.requestHeader().
+        BlushApiPage.headerContentType().
                 body(BlushApiPage.bodyLoginNoEmail).
                 when().post(BlushApiPage.url).
                 then().
@@ -35,7 +35,7 @@ public class BlushApiTest {
 
     @Test
     public void testBushLoginSpacebarInPassword() {
-        BlushApiPage.requestHeader().
+        BlushApiPage.headerContentType().
                 body(BlushApiPage.bodyLoginSpacebarInPassword).
                 when().body(BlushApiPage.url).
                 then().
