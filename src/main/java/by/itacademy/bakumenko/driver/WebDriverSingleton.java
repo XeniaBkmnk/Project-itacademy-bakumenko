@@ -3,10 +3,10 @@ package by.itacademy.bakumenko.driver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class MyDriver {
+public class WebDriverSingleton {
     private static WebDriver driver;
 
-    private MyDriver() {
+    private WebDriverSingleton() {
     }
 
     public static WebDriver getDriver() {

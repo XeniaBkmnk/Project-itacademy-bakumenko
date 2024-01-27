@@ -1,6 +1,6 @@
 package by.itacademy.bakumenko.page;
 
-import by.itacademy.bakumenko.driver.MyDriver;
+import by.itacademy.bakumenko.driver.WebDriverSingleton;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -8,7 +8,7 @@ public class BlushPage {
     private WebDriver driver;
 
     public BlushPage() {
-        this.driver = MyDriver.getDriver();
+        this.driver = WebDriverSingleton.getDriver();
     }
 
     public void openMainPage() {
