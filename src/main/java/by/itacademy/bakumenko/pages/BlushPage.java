@@ -2,6 +2,7 @@ package by.itacademy.bakumenko.pages;
 
 import by.itacademy.bakumenko.driver.WebDriverSingleton;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
 public class BlushPage {
@@ -27,9 +28,9 @@ public class BlushPage {
     public void sendKeysLoginInputEmail(String newEmail) throws InterruptedException {
         driver.findElement(By.xpath(BlushXpathPage.LOGIN_INPUT_EMAIL)).sendKeys(newEmail);
         try {
-            Thread.sleep(6000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+            driver.findElement(By.xpath(BlushXpathPage.LOGIN_INPUT_EMAIL)).sendKeys(newEmail);
+        } catch (NoSuchElementException e) {
+            driver.findElement(By.xpath("//input[@id='email']")).sendKeys(newEmail);
         }
     }
 
@@ -49,8 +50,8 @@ public class BlushPage {
         return driver.findElement(By.xpath(BlushXpathPage.ERROR_MESSAGE_NON_PASSWORD)).getText();
     }
 
-    public String getErrorMessageNonCorrectEmail(){
-       return driver.findElement(By.xpath(BlushXpathPage.ERROR_MESSAGE_NON_CORRECT_EMAIL)).getText();
+    public String getErrorMessageNonCorrectEmail() {
+        return driver.findElement(By.xpath(BlushXpathPage.ERROR_MESSAGE_NON_CORRECT_EMAIL)).getText();
     }
 
 }
