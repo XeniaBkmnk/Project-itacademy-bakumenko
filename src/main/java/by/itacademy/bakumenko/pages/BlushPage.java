@@ -33,7 +33,7 @@ public class BlushPage {
             try {
                 driver.findElement(By.xpath("//*[contains(@id, 'email')]")).sendKeys(newEmail);
             } catch (NoSuchElementException ex) {
-                driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys(newEmail);
+                driver.findElement(By.xpath("//input[@id='email']\\")).sendKeys(newEmail);
             }
         }
     }
