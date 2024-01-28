@@ -20,9 +20,8 @@ public class BlushPage {
         driver.findElement(By.xpath(BlushXpathPage.LOGIN_INPUT_FELD)).click();
     }
 
-    public void clickLoginButtonMain() throws InterruptedException {
+    public void clickLoginButtonMain() {
         driver.findElement(By.xpath(BlushXpathPage.LOGIN_BUTTON_MAIN)).click();
-        Thread.sleep(1000);
     }
 
     public void sendKeysLoginInputEmail(String newEmail) throws InterruptedException {
