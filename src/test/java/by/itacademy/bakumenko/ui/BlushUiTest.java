@@ -14,8 +14,7 @@ public class BlushUiTest extends BaseTest {
         blushPage.sendKeysLoginInputEmail(User.getRandomCorrectEmail());
         blushPage.sendKeysInputPassword(User.getRandomPassword());
         blushPage.clickLoginButtonMain();
-        blushPage.getErrorMessageNonUserEmail();
-        Assertions.assertEquals("There is no user record corresponding to this identifier. The user may have been deleted.", blushPage.getErrorMessageNonUserEmail());
+                Assertions.assertEquals("There is no user record corresponding to this identifier. The user may have been deleted.", blushPage.getErrorMessageNonUserEmail());
     }
 
     @Test
