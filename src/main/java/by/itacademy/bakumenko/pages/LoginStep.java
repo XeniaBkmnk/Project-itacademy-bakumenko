@@ -20,8 +20,8 @@ public class LoginStep {
     public void openLoginFormByEmailFillAndSubmit(String email, String password) throws InterruptedException{
         blushPage.openMainPage();
         blushPage.clickLoginInputField();
-        blushPage.sendKeysLoginInputEmail(User.getRandomCorrectEmail());
-        blushPage.sendKeysInputPassword(User.getRandomPassword());
+        blushPage.sendKeysLoginInputEmail(email);
+        blushPage.sendKeysInputPassword(password);
         blushPage.clickLoginButtonMain();
     }
 }
