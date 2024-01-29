@@ -33,11 +33,13 @@ public class BlushApiTest {
 
     @Test
     public void testBushLoginNoEmail() {
+        LOGGER.info("testBushLoginNoEmail started");
         BlushApiPage.headerContentType().
                 body(BlushApiPage.bodyLoginNoEmail).
                 when().post(BlushApiPage.url).
                 then().
                 statusCode(400).body("error.errors[0].message", equalTo("INVALID_EMAIL"));
+        LOGGER.info("testBushLoginNoEmail passed");
     }
 
     @Test
