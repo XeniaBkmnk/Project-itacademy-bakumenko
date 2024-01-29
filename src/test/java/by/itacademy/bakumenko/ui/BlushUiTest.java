@@ -22,6 +22,7 @@ public class BlushUiTest extends BaseTest {
     @Test
     public void testLoginNonPassword() throws InterruptedException {
         loginStep.openLoginFormByEmailFillAndSubmit(User.getRandomCorrectEmail(),"");
+        LOGGER.info("Expected Error Message: " + "Password is required.");
         Assertions.assertEquals("Password is required.", blushPage.getErrorMessageNonPassword());
     }
 
