@@ -36,8 +36,7 @@ public class BlushUiTest extends BaseTest {
         blushPage.sendKeysLoginInputEmail(User.getRandomNonCorrectEmail());
         blushPage.sendKeysInputPassword(User.getRandomPassword());
         blushPage.clickLoginButtonMain();
-        blushPage.getErrorMessageNonCorrectEmail();
-        Assertions.assertEquals("The email address is badly formatted.", blushPage.getErrorMessageNonCorrectEmail());
+               Assertions.assertEquals("The email address is badly formatted.", blushPage.getErrorMessageNonCorrectEmail());
     }
 
 }
