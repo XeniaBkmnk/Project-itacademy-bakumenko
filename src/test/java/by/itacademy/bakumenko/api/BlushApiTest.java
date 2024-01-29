@@ -44,11 +44,13 @@ public class BlushApiTest {
 
     @Test
     public void testBushLoginSpacebarInPassword() {
+        LOGGER.info("testBushLoginSpacebarInPassword started");
         BlushApiPage.headerContentType().
                 body(BlushApiPage.bodyLoginSpacebarInPassword).
                 when().body(BlushApiPage.url).
                 then().
                 statusCode(400).body("error.errors[0].message", equalTo("EMAIL_NOT_FOUND"));
+        LOGGER.info("testBushLoginSpacebarInPassword passed");
     }
 
 }
