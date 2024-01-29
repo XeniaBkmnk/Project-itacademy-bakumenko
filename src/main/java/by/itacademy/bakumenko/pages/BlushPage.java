@@ -57,4 +57,8 @@ public class BlushPage {
         return driver.findElement(By.xpath(BlushXpathPage.ERROR_MESSAGE_NON_CORRECT_EMAIL)).getText();
     }
 
+    public String getSearchAuthorMassage(){
+        return driver.findElement(By.xpath(BlushXpathPage.SEARCH_AUTHOR_MASSAGE)).getText();
+    }
+
 }
