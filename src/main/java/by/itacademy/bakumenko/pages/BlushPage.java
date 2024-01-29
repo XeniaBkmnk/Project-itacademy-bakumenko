@@ -25,7 +25,7 @@ public class BlushPage {
     Thread.sleep(4000);
     }
 
-    public void sendKeysLoginInputEmail(String newEmail) throws InterruptedException {
+    public void sendKeysLoginInputEmail(String newEmail) {
                 try {
             driver.findElement(By.xpath(BlushXpathPage.LOGIN_INPUT_EMAIL)).sendKeys(newEmail);
         } catch (NoSuchElementException e) {
