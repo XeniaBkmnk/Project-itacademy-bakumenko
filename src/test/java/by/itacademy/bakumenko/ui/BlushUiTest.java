@@ -29,6 +29,7 @@ public class BlushUiTest extends BaseTest {
     @Test
     public void testLoginNonCorrectEmail() throws InterruptedException {
         loginStep.openLoginFormByEmailFillAndSubmit(User.getRandomNonCorrectEmail(),User.getRandomPassword());
+        LOGGER.info("Expected Error Message: " + "The email address is badly formatted.");
         Assertions.assertEquals("The email address is badly formatted.", blushPage.getErrorMessageNonCorrectEmail());
     }
 
