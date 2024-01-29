@@ -36,6 +36,7 @@ public class BlushUiTest extends BaseTest {
     @Test
     public void testSearchAuthorMassage() {
         blushPage.openMainPage();
+        LOGGER.info("Expected Author Massage: " + "© Blush Design Inc. All rights reserved.");
         Assertions.assertEquals("© Blush Design Inc. All rights reserved.", blushPage.getSearchAuthorMassage());
     }
 
