@@ -18,11 +18,7 @@ public class BlushUiTest extends BaseTest {
     @Test
     public void testLoginNonPassword() throws InterruptedException {
         BlushPage blushPage = new BlushPage();
-        blushPage.openMainPage();
-        blushPage.clickLoginInputField();
-        blushPage.sendKeysLoginInputEmail(User.getRandomCorrectEmail());
-        blushPage.sendKeysInputPassword("");
-        blushPage.clickLoginButtonMain();
+        loginStep.openLoginFormByEmailFillAndSubmit(User.getRandomCorrectEmail(),"");
         Assertions.assertEquals("Password is required.", blushPage.getErrorMessageNonPassword());
     }
 
