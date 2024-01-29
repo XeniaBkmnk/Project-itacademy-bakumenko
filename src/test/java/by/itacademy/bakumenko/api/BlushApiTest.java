@@ -22,11 +22,13 @@ public class BlushApiTest {
 
     @Test
     public void testBushLoginNoPassword() {
+        LOGGER.info("testBushLoginNoPassword started");
         BlushApiPage.headerContentType().
                 body(BlushApiPage.bodyLoginNoPassword).
                 when().post(BlushApiPage.url).
                 then().
                 statusCode(400).body("error.errors[0].message", equalTo("MISSING_PASSWORD"));
+        LOGGER.info("testBushLoginNoPassword passed");
     }
 
     @Test
