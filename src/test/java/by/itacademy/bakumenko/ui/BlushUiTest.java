@@ -2,18 +2,16 @@ package by.itacademy.bakumenko.ui;
 
 import by.itacademy.bakumenko.domain.User;
 import by.itacademy.bakumenko.pages.BlushPage;
+import by.itacademy.bakumenko.pages.LoginStep;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class BlushUiTest extends BaseTest {
+    LoginStep loginStep = new LoginStep();
     @Test
     public void testLoginNonUserEmail() throws InterruptedException {
         BlushPage blushPage = new BlushPage();
-        blushPage.openMainPage();
-        blushPage.clickLoginInputField();
-        blushPage.sendKeysLoginInputEmail(User.getRandomCorrectEmail());
-        blushPage.sendKeysInputPassword(User.getRandomPassword());
-        blushPage.clickLoginButtonMain();
+        loginStep.openLoginFormByEmailFillAndSubmit(User.getRandomCorrectEmail(),User.getRandomPassword());
         Assertions.assertEquals("There is no user record corresponding to this identifier. The user may have been deleted.", blushPage.getErrorMessageNonUserEmail());
     }
 
