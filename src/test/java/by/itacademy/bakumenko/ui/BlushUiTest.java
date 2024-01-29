@@ -7,35 +7,28 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class BlushUiTest extends BaseTest {
+    BlushPage blushPage = new BlushPage();
     LoginStep loginStep = new LoginStep();
     @Test
     public void testLoginNonUserEmail() throws InterruptedException {
-        BlushPage blushPage = new BlushPage();
         loginStep.openLoginFormByEmailFillAndSubmit(User.getRandomCorrectEmail(),User.getRandomPassword());
         Assertions.assertEquals("There is no user record corresponding to this identifier. The user may have been deleted.", blushPage.getErrorMessageNonUserEmail());
     }
 
     @Test
     public void testLoginNonPassword() throws InterruptedException {
-        BlushPage blushPage = new BlushPage();
         loginStep.openLoginFormByEmailFillAndSubmit(User.getRandomCorrectEmail(),"");
         Assertions.assertEquals("Password is required.", blushPage.getErrorMessageNonPassword());
     }
 
     @Test
     public void testLoginNonCorrectEmail() throws InterruptedException {
-        BlushPage blushPage = new BlushPage();
-        blushPage.openMainPage();
-        blushPage.clickLoginInputField();
-        blushPage.sendKeysLoginInputEmail(User.getRandomNonCorrectEmail());
-        blushPage.sendKeysInputPassword(User.getRandomPassword());
-        blushPage.clickLoginButtonMain();
+        loginStep.openLoginFormByEmailFillAndSubmit(User.getRandomNonCorrectEmail(),User.getRandomPassword());
         Assertions.assertEquals("The email address is badly formatted.", blushPage.getErrorMessageNonCorrectEmail());
     }
 
     @Test
     public void testSearchAuthorMassage() {
-        BlushPage blushPage = new BlushPage();
         blushPage.openMainPage();
         Assertions.assertEquals("© Blush Design Inc. All rights reserved.", blushPage.getSearchAuthorMassage());
     }
