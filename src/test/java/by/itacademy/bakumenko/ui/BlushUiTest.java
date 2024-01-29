@@ -26,8 +26,7 @@ public class BlushUiTest extends BaseTest {
         blushPage.sendKeysLoginInputEmail(User.getRandomCorrectEmail());
         blushPage.sendKeysInputPassword("");
         blushPage.clickLoginButtonMain();
-        blushPage.getErrorMessageNonPassword();
-        Assertions.assertEquals("Password is required.", blushPage.getErrorMessageNonPassword());
+               Assertions.assertEquals("Password is required.", blushPage.getErrorMessageNonPassword());
     }
 
     @Test
