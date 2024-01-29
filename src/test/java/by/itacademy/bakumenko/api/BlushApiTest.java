@@ -1,18 +1,23 @@
 package by.itacademy.bakumenko.api;
 
 import by.itacademy.bakumenko.pages.BlushApiPage;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.core.IsEqual.equalTo;
 
 public class BlushApiTest {
+    private static final Logger LOGGER = LogManager.getLogger();
     @Test
     public void testBushLoginNoDate() {
+        LOGGER.info("testBushLoginNoDate started");
         BlushApiPage.headerContentType().
                 body(BlushApiPage.bodyLoginNoData).
                 when().post(BlushApiPage.url).
                 then().
                 statusCode(400).body("error.errors[0].message", equalTo("INVALID_EMAIL"));
+        LOGGER.info("testBushLoginNoDate passed");
     }
 
     @Test
