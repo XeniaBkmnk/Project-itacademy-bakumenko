@@ -14,7 +14,7 @@ public class BlushUiTest extends BaseTest {
         blushPage.sendKeysLoginInputEmail(User.getRandomCorrectEmail());
         blushPage.sendKeysInputPassword(User.getRandomPassword());
         blushPage.clickLoginButtonMain();
-                Assertions.assertEquals("There is no user record corresponding to this identifier. The user may have been deleted.", blushPage.getErrorMessageNonUserEmail());
+        Assertions.assertEquals("There is no user record corresponding to this identifier. The user may have been deleted.", blushPage.getErrorMessageNonUserEmail());
     }
 
     @Test
@@ -25,7 +25,7 @@ public class BlushUiTest extends BaseTest {
         blushPage.sendKeysLoginInputEmail(User.getRandomCorrectEmail());
         blushPage.sendKeysInputPassword("");
         blushPage.clickLoginButtonMain();
-               Assertions.assertEquals("Password is required.", blushPage.getErrorMessageNonPassword());
+        Assertions.assertEquals("Password is required.", blushPage.getErrorMessageNonPassword());
     }
 
     @Test
@@ -36,7 +36,14 @@ public class BlushUiTest extends BaseTest {
         blushPage.sendKeysLoginInputEmail(User.getRandomNonCorrectEmail());
         blushPage.sendKeysInputPassword(User.getRandomPassword());
         blushPage.clickLoginButtonMain();
-               Assertions.assertEquals("The email address is badly formatted.", blushPage.getErrorMessageNonCorrectEmail());
+        Assertions.assertEquals("The email address is badly formatted.", blushPage.getErrorMessageNonCorrectEmail());
+    }
+
+    @Test
+    public void testSearchAuthorMassage() {
+        BlushPage blushPage = new BlushPage();
+        blushPage.openMainPage();
+        Assertions.assertEquals("© Blush Design Inc. All rights reserved.", blushPage.getSearchAuthorMassage());
     }
 
 }
