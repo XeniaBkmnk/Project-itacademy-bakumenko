@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Blush.design App Test Automation Project</title>
+  <title>Blush App Test Automation Project</title>
 </head>
 <body>
   <h1>Blush.design App Test Automation Project</h1>
