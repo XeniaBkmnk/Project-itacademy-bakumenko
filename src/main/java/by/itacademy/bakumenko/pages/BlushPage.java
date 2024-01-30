@@ -5,6 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class BlushPage {
     private WebDriver driver;
 
@@ -26,7 +28,8 @@ public class BlushPage {
     }
 
     public void sendKeysLoginInputEmail(String newEmail) {
-                try {
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        try {
             driver.findElement(By.xpath(BlushXpathPage.LOGIN_INPUT_EMAIL)).sendKeys(newEmail);
         } catch (NoSuchElementException e) {
             try {
