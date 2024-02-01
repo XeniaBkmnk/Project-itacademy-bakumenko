@@ -72,4 +72,8 @@ public class BlushPage {
         driver.findElement(By.xpath(BlushXpathPage.SEARCH_ELEMENT)).click();
     }
 
+    public String getTitleText(){
+        return driver.findElement(By.xpath(BlushXpathPage.TITLE_TEXT)).getText();
+    }
+
 }
