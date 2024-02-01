@@ -11,4 +11,5 @@ public class BlushXpathPage {
     public static final String ERROR_MESSAGE_NON_CORRECT_EMAIL = "//*[@id=\"__next\"]/div[3]/div/div[1]/form/div";
     public static final String SEARCH_AUTHOR_MASSAGE = "//*[@id=\"__next\"]/div[4]/div/div/div[5]";
     public static final String SEARCH_BAR = "//*[@id=\"search\"]";
+    public static final String SEARCH_ELEMENT = "//*[@id=\"tippy-483\"]/div/div/div/div[1]/a";
 }
