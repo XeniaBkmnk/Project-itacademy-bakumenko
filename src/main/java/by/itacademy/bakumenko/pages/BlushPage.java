@@ -4,6 +4,7 @@ import by.itacademy.bakumenko.driver.WebDriverSingleton;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
 
@@ -24,7 +25,7 @@ public class BlushPage {
 
     public void clickLoginButtonMain() throws InterruptedException {
         driver.findElement(By.xpath(BlushXpathPage.LOGIN_BUTTON_MAIN)).click();
-    Thread.sleep(4000);
+        Thread.sleep(4000);
     }
 
     public void sendKeysLoginInputEmail(String newEmail) {
@@ -60,19 +61,23 @@ public class BlushPage {
         return driver.findElement(By.xpath(BlushXpathPage.ERROR_MESSAGE_NON_CORRECT_EMAIL)).getText();
     }
 
-    public String getSearchAuthorMassage(){
+    public String getSearchAuthorMassage() {
         return driver.findElement(By.xpath(BlushXpathPage.SEARCH_AUTHOR_MASSAGE)).getText();
     }
 
-    public void sendKeysSearchBar(String newSearchElement){
-        driver.findElement(By.xpath(BlushXpathPage.SEARCH_BAR)).sendKeys(newSearchElement);
+    public void sendKeysSearchBar(String newSearchElement) {
+        WebElement searchBar = driver.findElement(By.xpath(BlushXpathPage.SEARCH_BAR));
+        searchBar.sendKeys(newSearchElement);
+        searchBar.submit();
     }
 
-    public void clickSearchElement(){
+
+    public void clickSearchElement() {
         driver.findElement(By.xpath(BlushXpathPage.SEARCH_ELEMENT)).click();
     }
 
-    public String getTitleText(){
+    public String getTitleText() {
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         return driver.findElement(By.xpath(BlushXpathPage.TITLE_TEXT)).getText();
     }
 
