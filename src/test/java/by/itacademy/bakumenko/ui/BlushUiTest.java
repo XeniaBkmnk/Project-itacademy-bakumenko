@@ -14,7 +14,7 @@ public class BlushUiTest extends BaseTest {
     private static final Logger LOGGER = LogManager.getLogger();
 
     @Test
-    public void testLoginNonUserEmail() throws InterruptedException {
+    public void testLoginNonExistentUser() throws InterruptedException {
         loginStep.openLoginFormByEmailFillAndSubmit(User.getRandomCorrectEmail(), User.getRandomPassword());
         LOGGER.info("Expected Error Message: " + "There is no user record corresponding to this identifier. The user may have been deleted.");
         Assertions.assertEquals("There is no user record corresponding to this identifier. The user may have been deleted.", blushPage.getErrorMessageNonUserEmail());
