@@ -64,4 +64,8 @@ public class BlushPage {
         return driver.findElement(By.xpath(BlushXpathPage.SEARCH_AUTHOR_MASSAGE)).getText();
     }
 
+    public void clickSearchBar(){
+        driver.findElement(By.xpath(BlushXpathPage.SEARCH_BAR)).getText();
+    }
+
 }
