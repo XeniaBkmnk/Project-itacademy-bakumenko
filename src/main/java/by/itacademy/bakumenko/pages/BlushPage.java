@@ -19,7 +19,7 @@ public class BlushPage {
     }
 
     public void clickLoginInputField() {
-        driver.findElement(By.xpath(BlushXpathPage.LOGIN_INPUT_FELD)).click();
+        driver.findElement(By.xpath(BlushXpathPage.LOGIN_INPUT_FIELD)).click();
     }
 
     public void clickLoginButtonMain() throws InterruptedException {
@@ -64,8 +64,8 @@ public class BlushPage {
         return driver.findElement(By.xpath(BlushXpathPage.SEARCH_AUTHOR_MASSAGE)).getText();
     }
 
-    public void clickSearchBar(){
-        driver.findElement(By.xpath(BlushXpathPage.SEARCH_BAR)).click();
+    public String getSearchBar(){
+       return driver.findElement(By.xpath(BlushXpathPage.SEARCH_BAR)).getText();
     }
 
 }
