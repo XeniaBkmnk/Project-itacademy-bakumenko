@@ -71,11 +71,6 @@ public class BlushPage {
         searchBar.submit();
     }
 
-
-    public void clickSearchElement() {
-        driver.findElement(By.xpath(BlushXpathPage.SEARCH_ELEMENT)).click();
-    }
-
     public String getTitleText() {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         return driver.findElement(By.xpath(BlushXpathPage.TITLE_TEXT)).getText();
