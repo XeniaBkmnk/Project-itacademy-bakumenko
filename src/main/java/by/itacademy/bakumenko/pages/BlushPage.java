@@ -65,7 +65,7 @@ public class BlushPage {
     }
 
     public void clickSearchBar(){
-        driver.findElement(By.xpath(BlushXpathPage.SEARCH_BAR)).getText();
+        driver.findElement(By.xpath(BlushXpathPage.SEARCH_BAR)).click();
     }
 
 }
