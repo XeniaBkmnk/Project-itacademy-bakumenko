@@ -35,6 +35,13 @@ public class BlushUiTest extends BaseTest {
     }
 
     @Test
+    public void testLoginNoEmail() throws InterruptedException {
+        loginStep.openLoginFormByEmailFillAndSubmit("", User.getRandomPassword());
+        LOGGER.info("Expected Error Message: " + "Email is required.");
+        Assertions.assertEquals("Email is required.", blushPage.getErrorMessageNoEmail());
+    }
+
+    @Test
     public void testSearchAuthorMassage() {
         blushPage.openMainPage();
         LOGGER.info("Expected Author Massage: " + "© Blush Design Inc. All rights reserved.");
