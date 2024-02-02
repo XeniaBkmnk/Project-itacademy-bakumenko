@@ -49,8 +49,8 @@ public class BlushPage {
         return driver.findElement(By.xpath(BlushXpathPage.ERROR_MESSAGE_NON_USER_EMAIL)).getText();
     }
 
-    public String getErrorMessageNonEmail() {
-        return driver.findElement(By.xpath(BlushXpathPage.ERROR_MESSAGE_NON_EMAIL)).getText();
+    public String getErrorMessageNoEmail() {
+        return driver.findElement(By.xpath(BlushXpathPage.ERROR_MESSAGE_NO_EMAIL)).getText();
     }
 
     public String getErrorMessageNonPassword() {
