@@ -2,7 +2,7 @@ package by.itacademy.bakumenko.ui;
 
 import by.itacademy.bakumenko.domain.User;
 import by.itacademy.bakumenko.pages.BlushPage;
-import by.itacademy.bakumenko.pages.LoginStep;
+import by.itacademy.bakumenko.step.LoginStep;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Assertions;

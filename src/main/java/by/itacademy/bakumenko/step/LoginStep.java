@@ -1,7 +1,8 @@
-package by.itacademy.bakumenko.pages;
+package by.itacademy.bakumenko.step;
 
 import by.itacademy.bakumenko.domain.User;
 import by.itacademy.bakumenko.driver.WebDriverSingleton;
+import by.itacademy.bakumenko.pages.BlushPage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
